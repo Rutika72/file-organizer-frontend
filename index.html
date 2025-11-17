@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Organizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="logo">FO</div>
+      <div>
+        <h1>File Organizer — Frontend Simulation</h1>
+        <p class="lead">Upload files, categorize, search, filter and preview — no backend needed.</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <aside class="sidebar">
+        <label class="uploader" id="dropzone">
+          <input type="file" id="fileInput" multiple>
+          <div style="font-weight:700">Click or drop files here</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:6px">Images, videos, pdfs, docs — they'll be categorized automatically.</div>
+        </label>
+
+        <div class="row">
+          <button class="btn" id="addBtn">Add files</button>
+          <button class="btn ghost" id="clearBtn">Clear all</button>
+        </div>
+
+        <div class="filters">
+          <h4 style="margin:12px 0 6px">Categories</h4>
+          <div class="filter-list" id="categoryList"></div>
+        </div>
+
+        <div style="margin-top:18px">
+          <h4 style="margin:6px 0">Legend</h4>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <div class="chip">📄 Docs</div>
+            <div class="chip">🖼️ Images</div>
+            <div class="chip">🎞️ Videos</div>
+            <div class="chip">📦 Others</div>
+          </div>
+        </div>
+
+      </aside>
+
+      <main class="main">
+        <div class="controls">
+          <div class="search">
+            <input type="text" id="search" placeholder="Search by filename...">
+          </div>
+          <div style="width:160px">
+            <select id="typeFilter">
+              <option value="all">All types</option>
+              <option value="images">Images</option>
+              <option value="videos">Videos</option>
+              <option value="docs">Docs</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+          <div style="width:160px">
+            <select id="sortBy">
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+              <option value="nameAsc">Name A→Z</option>
+              <option value="nameDesc">Name Z→A</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="filesArea">
+          <!-- Files grid injected here -->
+        </div>
+
+        <footer id="footer"></footer>
+      </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
