@@ -57,4 +57,4 @@ Preview Modal: Clicking preview opens a modal with a larger image and file detai
 
 OUTPUT:-
 ![image Alt]((https://github.com/Rutika72/file-organizer-frontend/blob/main/Screenshot%202025-11-17%20193220.png)
-![image Alt](Screenshot 2025-11-17 193238.png)
+![image Alt]((https://github.com/Rutika72/file-organizer-frontend/blob/main/Screenshot%202025-11-17%20193238.png)
